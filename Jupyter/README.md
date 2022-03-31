@@ -48,3 +48,14 @@ You should make a tunnel in your own terminal (on your personal machine) :
 ssh -fNL XXXX:hostname:XXXX login@server
 ssh -fNL XXXX:hostname:XXXX -p port_nb login@server
 ```
+It's important to have one tunnel to the same server. Otherwise the jupyter will break.
+<br> To check the the running processes with ssh: `ps -aef|grep ssh`
+ ```bash
+ you get:
+ usename     434   225  0 21:26 pts/6    00:00:00 ssh -X login@server
+ usename     438     1  0 21:27 ?        00:00:00 ssh -fNL XXXX:hostname:XXXX login@server
+ usename     440    30  0 21:28 pts/1    00:00:00 grep --color=auto ssh
+ ```
+ To delete a process: `kill -9 nb_of_process`
+ 
+
