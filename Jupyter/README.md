@@ -48,8 +48,6 @@ You should make a tunnel in your own terminal (on your personal machine) :
 ssh -fNL XXXX:hostname:XXXX login@server
 ssh -fNL XXXX:hostname:XXXX -p port_nb login@server
 ```
-
-
 <br><br>/!\ It's important to have one tunnel to the same server. Otherwise the jupyter will break.
 <br> To check the the running processes with ssh: `ps -aef|grep ssh`
  ```bash
