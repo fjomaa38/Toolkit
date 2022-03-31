@@ -1,32 +1,31 @@
-# Jupyter notebook/ lab
+## Jupyter notebook/ lab
 #JOMAA_2021
-## Installing jupyter:
+### 1. Installing jupyter:
 
 ```bash
 conda install jupyter
 ```
-## Installing jupyter lab:
+### 2. Installing jupyter lab:
 ```
 conda install -c conda-forge jupyterlab
 python -m ipykernel install --user --name myenv --display-name "Python 3.6 (myenv)"
 # don't forget to replace myenv and setup the python version
 ```
-## Launching Jupyter
+### 3. Launching Jupyter
 
 If you are launching Jupyter on a server you need to make an ssh bridge between your machine and the server to open Jupyter directly on your internet browser. So you have to specify to Jupyter not to open a window on the server and to open Jupyter on a specific port (if needed).
 
 There are two ways to do this, either you specify all this in your command when you run Jupyter, or you create a configuration file:
-**1. Command line**
+* **Command line**
 
-Here is an example of a command line; XXXX would be your port number
+>Here is an example of a command line; XXXX would be your port number  
+  ```bash
+   jupyter lab --port XXXX --ip 0.0.0.0 --no-browser
+   ```
 
-```bash
-jupyter lab --port XXXX --ip 0.0.0.0 --no-browser
-```
+* **Configuration file** (recommended in the sense you don't need everytime to type the above command line ;))
 
-**2. Configuration file** (recommended in the sense you don't need everytime to type the above command line ;))
-
-Generate a configuration file and edit it:
+>Generate a configuration file and edit it:
 
 ```bash
 jupyter notebook --generate-config
@@ -37,8 +36,6 @@ vi /home/user/.jupyter/jupyter_notebook_config.py
    c.NotebookApp.allow_origin = '*'
 ```
 
-
-## Runnig Jupyter 
 After configuration you can launch jupyter using: 
 
 ```jupyter notebook``` 
