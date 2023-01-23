@@ -5,14 +5,18 @@
 ```bash 
 ssh-keygen -t rsa
 ```
+Path to SSH folder in the local machine: /Users/username/.ssh/
+
 2. in file .ssh/config (vi .ssh/config) write:
 
 ```bash 
-Host server_abbreviation # you choose it   
-ProxyCommand ssh -qX username@server_name nc IP portnb 
+Host server_abbreviation # you can choose any name   
+ProxyCommand ssh -qX username@domain nc IP portnb 
 User user_name
 GatewayPorts yes
 ```
-Now you can connet to the server using the "server_abbreviation" you have choosed 
+Now you can connet to the server using the "server_name"
+(type "server_name" and hit enter)
 
- Path to SSH folder in the local machine:  /Users/username/.ssh/
+Good job :)
+
