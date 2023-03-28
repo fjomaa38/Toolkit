@@ -35,21 +35,30 @@ vi /home/user/.jupyter/jupyter_notebook_config.py
    c.NotebookApp.ip = '0.0.0.0' 
    c.NotebookApp.allow_origin = '*'
 ```
+-----------------------------------------------------------
+After configuration you can launch jupyter by typing this command : 
 
-After configuration you can launch jupyter using: 
-
-```jupyter notebook``` 
-
-Copy the generated url into your browser to open jupyter and don't forget change ***tree*** ,in the url, to ***lab*** 
-
-If you are working on a server 
-You should make a tunnel in your own terminal (on your personal machine) : 
 ```bash
-ssh -fNL XXXX:hostname:XXXX login@server
-ssh -fNL XXXX:hostname:XXXX -p port_nb login@server
+jupyter notebook
+``` 
+
+Now you will get something similar to:
+```consule
+    To access the notebook, open this file in a browser:
+        file:///home/XXXX/.local/share/jupyter/runtime/nbserver-4130898-open.html
+    Or copy and paste one of these URLs:
+        http://spiritx1.ipsl.fr:7356/?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+     or http://XXXXX:7356/?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
+Copy one of the generated url into your browser to open jupyter and don't forget to change ***tree*** ,in the url, to ***lab*** 
+
+If you are working on a server you should make a tunnel in your own terminal (on your personal machine) to be able to connect to the browser: 
+```bash
+ssh -fNL XXXX:hostname:XXXX login@server 
+ssh -fNL XXXX:hostname:XXXX -p port_nb login@server  # in case you have to connect to specific port 
 ```
 <br><br>/!\ It's important to have one tunnel to the same server. Otherwise the jupyter will break.
-<br> To check the the running processes with ssh: `ps -aef|grep ssh`
+<br> To check the the running processes with ssh use : `ps -aef|grep ssh`
  ```bash
  you get:
  usename     434   225  0 21:26 pts/6    00:00:00 ssh -X login@server
