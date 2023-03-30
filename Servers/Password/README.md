@@ -1,5 +1,7 @@
-## How to connect to servesrs without typing the password each time?
-#JOMAA_2023
+## Configuring a ssh login without password
+JOMAA_2023
+<br>How to connect to servesrs without typing the password each time?
+
 ### 1. Check if there is an existing ssh key
 ```
 ls -al ~/.ssh
