@@ -43,11 +43,11 @@ jupyter notebook
 ``` 
 
 Now you will get something similar to:
-```consule
+```ruby
     To access the notebook, open this file in a browser:
         file:///home/XXXX/.local/share/jupyter/runtime/nbserver-4130898-open.html
     Or copy and paste one of these URLs:
-        http://spiritx1.ipsl.fr:7356/?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        http://hostname@server:7356/?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
      or http://XXXXX:7356/?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 Copy one of the generated url into your browser to open jupyter and don't forget to change ***tree*** ,in the url, to ***lab*** 
@@ -58,9 +58,8 @@ ssh -fNL XXXX:hostname:XXXX login@server
 ssh -fNL XXXX:hostname:XXXX -p port_nb login@server  # in case you have to connect to specific port 
 ```
 <br><br>/!\ It's important to have one tunnel to the same server. Otherwise the jupyter will break.
-<br> To check the the running processes with ssh use : `ps -aef|grep ssh`
- ```bash
- you get:
+<br> To check the the running processes with ssh use : `ps -aef|grep ssh` you will get:
+ ```ruby
  usename     434   225  0 21:26 pts/6    00:00:00 ssh -X login@server
  usename     438     1  0 21:27 ?        00:00:00 ssh -fNL XXXX:hostname:XXXX login@server
  usename     440    30  0 21:28 pts/1    00:00:00 grep --color=auto ssh
