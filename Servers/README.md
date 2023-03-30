@@ -32,5 +32,4 @@ Now you can connet to the server without typing your password using:
 -the "server_abreviation" that you choosed above
 <br>-or ssh -qX username@domain nc IP portnb
 
-Good job :)
 
