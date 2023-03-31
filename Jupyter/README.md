@@ -15,7 +15,9 @@ python -m ipykernel install --user --name myenv --display-name "Python 3.6 (myen
 
 If you are launching Jupyter on a server you need to make an ssh bridge between your machine and the server to open Jupyter directly on your internet browser. So you have to specify to Jupyter not to open a window on the server and to open Jupyter on a specific port (if needed).
 
-There are two ways to do this, either you specify all this in your command when you run Jupyter, or you create a configuration file:
+There are two ways to do this, either you specify all this in your command when you run Jupyter, or you create a configuration file.
+
+Note the two options specified in this command. The first command, -no-browser, tells Jupyter not to launch a web browser when it launches. We specify this because we are running Jupyter on a remote machine, which means it can't launch a web browser on your local computer. Instead it launches a text based browser in your terminal that isn't very useful. The second command, ip=0.0.0.0, tells Jupyter to serve the notebook on a public IP address. The default behavior is to only serve the notebook locally (for security reasons), but that doesn't work because we are trying to connect to a remote computer:
 * **Command line**
 
 >Here is an example of a command line; XXXX would be your port number  
