@@ -6,7 +6,7 @@ You will read in this page about:
 1. Connect to Spirit
 2. Launch a job
 3. Slurm commands
-4.
+4. Launch Jupyter
 
 -----
 
@@ -91,7 +91,7 @@ ${\color{cyan}seff}$: check the effeciency of your job.
 scancel 4253 
 
 ```
-## 3. Launch Jupyter  
+## 4. Launch Jupyter  
 To download jupyter on your server checkout [Install Jupyter](/Toolkit/Jupyter/README.md).
 
 Once everything is configured, we can now launch the Jupyter Notebook on the compute node. For more details check out [Install Jupyter](/Toolkit/Jupyter/README.md)
