@@ -59,7 +59,7 @@ If you are working on a server you should make a tunnel in your own terminal (on
 ssh -fNL XXXX:hostname:XXXX login@server 
 ssh -fNL XXXX:hostname:XXXX -p port_nb login@server  # in case you have to connect to specific port 
 ```
-<br><br>/!\ It's important to have one tunnel to the same server. Otherwise the jupyter will break.
+<br>/!\ It's important to have one tunnel to the same server. Otherwise the jupyter will break.
 <br> To check the the running processes with ssh use : `ps -aef|grep ssh` you will get:
  ```ruby
  usename     434   225  0 21:26 pts/6    00:00:00 ssh -X login@server
