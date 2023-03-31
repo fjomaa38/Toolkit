@@ -30,7 +30,7 @@ Head nodes adresses by cluster :
 # for example
 ssh -XY username@spiritx1.ipsl.fr
 ```
-If you wish to connect to the server without typing the passward everytime, check[Passwordless connect](Toolkit/Servers/Password)
+If you wish to connect to the server without typing the passward everytime, check [Passwordless connect](Toolkit/Servers/Password)
 
 
 ## 2. Launch a job:
